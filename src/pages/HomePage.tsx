@@ -7,7 +7,7 @@ export const HomePage = () => {
     const size = useScreen();
 
     return (
-        <MainLayout hiddenOvervlowY>
+        <MainLayout hiddenOvervlowY hiddenOvervlowX>
 
             {
                 size === 'mobile' && (
