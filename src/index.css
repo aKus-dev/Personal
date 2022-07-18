@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+* GLOBAL STYLES 
+*/
+html {
+    font-size: 62.5%;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* 
+* FONTS 
+*/
+@font-face {
+    font-family: "Elianto";
+    src: url("/fonts/Elianto/Elianto-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Ailerons";
+    src: url("/fonts/Ailerons/Ailerons-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Blanka";
+    src: url("/fonts/Blanka/Blanka-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Anurati";
+    src: url("/fonts/Anurati/Anurati-Regular.otf");
+}
+
