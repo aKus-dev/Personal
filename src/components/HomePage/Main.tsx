@@ -12,8 +12,12 @@ import {
 // TODO: Hacerlo responsive
 export const Main = () => {
 
-    const { theme } = useTheme();
+    const { theme, light, dark } = useTheme();
     const src = theme === 'light' ? '/assets/smoke-light.png' : '/assets/smoke-dark.png';
+
+    const handleChangeTheme = () => {
+        theme === 'light' ? dark() : light();
+    }
 
     return (
         <main>
@@ -35,16 +39,19 @@ export const Main = () => {
                     PROFESIÓN
                 </motion.p>
 
-                <motion.img
-                    {...smokeAnimations}
-                    src={src}
-                    className="absolute bottom-[10px] lg:bottom-[60px] w-[70%]"
-                    alt="Smoke"
-                />
 
                 <motion.div
                     {...circleWhiteAnimations}
-                    className="rounded-[50%] h-[20rem] w-[20rem] lg:h-[30rem] lg:w-[30rem] dark:bg-white bg-black flex justify-center items-center shadow-[0_0_10rem_#ffffff4d]"
+                    onClick={handleChangeTheme}
+                    whileHover={{ scale: 1.1 }}
+                    className="z-[99] cursor-pointer rounded-[50%] h-[20rem] w-[20rem] lg:h-[30rem] lg:w-[30rem] dark:bg-white bg-black flex justify-center items-center shadow-[0_0_10rem_#0000004d] dark:shadow-[0_0_10rem_#ffffff4d]"
+                />
+                
+                <motion.img
+                    {...smokeAnimations}
+                    src={src}
+                    className="absolute z-[9] bottom-[10px] lg:bottom-[60px] w-[70%]"
+                    alt="Smoke"
                 />
             </motion.div>
         </main>
