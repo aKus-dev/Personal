@@ -1,1 +1,0 @@
-export { activeMoonAtom } from './global';

@@ -1,4 +1,4 @@
-import { atom, useAtom } from "jotai";
+import { atom } from "jotai";
 
 interface validSides {
     side: 'top' | 'bottom' | 'right' | 'left'

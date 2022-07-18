@@ -1,7 +1,7 @@
 import { AnimatePresence } from 'framer-motion';
 import { Route, Routes, useLocation } from 'react-router-dom';
 
-import { HomePage } from '../pages';
+import { HomePage, NotFound } from '../pages';
 
 
 export const AnimatedRoutes = () => {
@@ -12,6 +12,7 @@ export const AnimatedRoutes = () => {
         <AnimatePresence exitBeforeEnter>
             <Routes location={location} key={location.pathname}>
                 <Route path="/" element={<HomePage />} />
+                <Route path="*" element={<NotFound />} />
             </Routes>
         </AnimatePresence>
     )

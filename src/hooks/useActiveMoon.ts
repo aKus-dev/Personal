@@ -1,6 +1,6 @@
 import { useAtom } from 'jotai';
 
-import { activeMoonAtom } from '../animations';
+import { activeMoonAtom } from '../global';
 
 export const useActiveMoon = () => {
     const [activeMoon, setActiveMoon] = useAtom(activeMoonAtom)

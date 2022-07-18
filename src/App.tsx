@@ -1,12 +1,18 @@
 import { BrowserRouter as Router } from 'react-router-dom';
 
 import { AnimatedRoutes } from './routes/AnimatedRoutes';
+import { useTheme } from './hooks';
 
 const App = () => {
+
+  const { theme } = useTheme();
+
   return (
-    <Router>
-      <AnimatedRoutes />
-    </Router>
+    <div className={theme}>
+      <Router>
+        <AnimatedRoutes />
+      </Router>
+    </div>
   )
 }
 

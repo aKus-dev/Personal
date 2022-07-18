@@ -1,38 +1,33 @@
-import { Link } from "react-router-dom"
-
 import { MainLayout, Moon } from "../components"
+import { Main } from '../components/HomePage';
 import { useScreen } from '../hooks';
-
 
 export const HomePage = () => {
 
     const size = useScreen();
 
     return (
-        <MainLayout>
+        <MainLayout hiddenOvervlowY>
 
             {
                 size === 'mobile' && (
                     <>
-                        <Moon side='top' />
-                        <Moon side='bottom' />
+                        <Moon to="/about" side='top' />
+                        <Moon to="/about" side='bottom' />
                     </>
                 )
             }
+
+            <Main />
 
             {
                 size === 'desktop' && (
                     <>
-                        <Moon side="right" />
-                        <Moon side="left" />
+                        <Moon to="/projects" side="right" />
+                        <Moon to="/technologies" side="left" />
                     </>
                 )
             }
-
-
-            <Link to="/about">
-                <p className="font-ailerons text-[70px]">Next</p>
-            </Link>
 
         </MainLayout>
     )
