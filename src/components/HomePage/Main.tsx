@@ -34,11 +34,11 @@ export const Main = () => {
                     PORTFOLIO
                 </Heading>
 
-                <Text {...textAnimations} className="absolute top-[-10px] lg:top-[140px] lg:left-[-120px] w-[22rem]">
+                <Text {...textAnimations} className="absolute top-[-10px] lg:top-[140px] lg:left-[-125px] lg:w-[22rem]">
                     PÁGINA PERSONAL
                 </Text>
 
-                <Text {...textAnimations} className="absolute bottom-[-40px] lg:bottom-[80px] lg:left-[500px] w-[27rem]">
+                <Text {...textAnimations} className="absolute bottom-[-40px] lg:bottom-[80px] lg:left-[500px] lg:w-[27rem]">
                     FRONTEND DEVELOPER
                 </Text>
 

@@ -3,6 +3,7 @@
 */
 export { Moon } from './utils/Moon';
 export { Text } from './utils/Text';
+export { Link } from './utils/Link';
 export { Heading } from './utils/Heading';
 
 /*

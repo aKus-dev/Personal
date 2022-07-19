@@ -3,6 +3,7 @@ import { MainLayout, Moon } from "../components"
 import { useScreen } from '../hooks';
 import { validRoutes } from '../routes';
 
+//TODO: Hacerlo responsive
 export const ProjectsPage = () => {
 
     const size = useScreen();
