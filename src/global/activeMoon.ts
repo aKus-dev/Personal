@@ -6,3 +6,9 @@ interface validSides {
 
 export const activeMoonAtom = atom<any>(null)
 
+export const noAnimateConfigAtom = atom({
+    top: false,
+    bottom: false,
+    right: false,
+    left: false
+})

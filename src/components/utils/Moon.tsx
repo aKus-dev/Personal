@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
-import { getMoonAnimation } from '../../helper/geMoonAnimations';
+import { getMoonAnimation } from '../../helpers/geMoonAnimations';
 import { useActiveMoon, useTheme } from '../../hooks';
 
 interface Props {
@@ -15,16 +15,19 @@ const transition = {
     duration: 1
 }
 
-export const Moon = ({ side, to, noAnimateInitial = false }: Props) => {
+export const Moon = ({ side, to }: Props) => {
 
     const { theme } = useTheme();
-    const { setActiveMoon } = useActiveMoon();
+    const location = useLocation();
+    const { setActiveMoon, updateNoAnimateConfig } = useActiveMoon();
+
 
     const handleMoonClick = () => {
         setActiveMoon(side)
+        updateNoAnimateConfig(location.pathname, to);
     }
 
-    const animations = getMoonAnimation(side, noAnimateInitial)
+    const animations = getMoonAnimation(side)
     const src = theme === 'light' ? '/assets/moon-light.png' : '/assets/moon-dark.png';
 
     return (

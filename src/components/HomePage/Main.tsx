@@ -12,6 +12,7 @@ import {
 export const Main = () => {
 
     const { theme, light, dark } = useTheme();
+    
     const src = theme === 'light' ? '/assets/smoke-light.png' : '/assets/smoke-dark.png';
 
     const handleChangeTheme = () => {
@@ -22,19 +23,19 @@ export const Main = () => {
         <main>
             <motion.div {...circleAnimation} className="rounded-[50%] h-[28rem] w-[28rem] lg:h-[60rem] lg:w-[60rem] border-[1px] dark:border-white border-black flex justify-center items-center relative">
 
-                <motion.h1 {...titleAnimations} className="font-elianto text-[2.5rem] lg:text-[5rem] absolute top-[-40px] lg:top-[80px] lg:left-[-120px]">
+                <motion.h1 {...titleAnimations} className="font-elianto text-[3rem] lg:text-[5rem] absolute top-[-40px] lg:top-[80px] lg:left-[-120px]">
                     PORTFOLIO
                 </motion.h1>
 
-                <motion.p {...textAnimations} className="font-ailerons text-[1.6rem] lg:text-[2.5rem] absolute top-[-10px] lg:top-[140px] lg:left-[-120px]">
+                <motion.p {...textAnimations} className="font-ailerons text-[2rem] lg:text-[2.5rem] absolute top-[-10px] lg:top-[140px] lg:left-[-120px]">
                     PÁGINA PERSONAL
                 </motion.p>
 
-                <motion.h1 {...textAnimations} className="text-center w-[27rem] font-ailerons text-[1.6rem] lg:text-[2.5rem] absolute bottom-[-40px] lg:bottom-[80px] lg:left-[500px]">
+                <motion.h1 {...textAnimations} className="text-center w-[27rem] font-ailerons text-[2rem] lg:text-[2.5rem] absolute bottom-[-40px] lg:bottom-[80px] lg:left-[500px]">
                     FRONTEND DEVELOPER
                 </motion.h1>
 
-                <motion.p {...titleAnimations} className="text-center w-[28rem] font-elianto text-[2.5rem] lg:text-[5rem] absolute bottom-[-25px] lg:bottom-[105px] lg:left-[500px]">
+                <motion.p {...titleAnimations} className="text-center w-[28rem] font-elianto text-[3rem] lg:text-[5rem] absolute bottom-[-25px] lg:bottom-[105px] lg:left-[500px]">
                     PROFESIÓN
                 </motion.p>
 

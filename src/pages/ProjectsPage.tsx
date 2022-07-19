@@ -11,7 +11,7 @@ export const ProjectsPage = () => {
             {
                 size === 'mobile' && (
                     <>
-                        <Moon to={validRoutes.home} side='bottom' noAnimateInitial />
+                        <Moon to={validRoutes.home} side='bottom' />
                     </>
                 )
             }
@@ -19,7 +19,7 @@ export const ProjectsPage = () => {
             {
                 size === 'desktop' && (
                     <>
-                        <Moon to={validRoutes.home} side='left' noAnimateInitial />
+                        <Moon to={validRoutes.home} side='left' />
                     </>
                 )
             }
