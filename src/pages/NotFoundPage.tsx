@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
 
-import { MainLayout, Moon } from '../components';
+import { MainLayout } from '../components';
 
-export const NotFound = () => {
+export const NotFoundPage = () => {
     return (
         <MainLayout>
             <motion.h1

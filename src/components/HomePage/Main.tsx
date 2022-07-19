@@ -9,7 +9,6 @@ import {
     circleAnimation
 } from "../../animations/HomePage";
 
-// TODO: Hacerlo responsive
 export const Main = () => {
 
     const { theme, light, dark } = useTheme();
@@ -31,11 +30,11 @@ export const Main = () => {
                     PÁGINA PERSONAL
                 </motion.p>
 
-                <motion.h1 {...textAnimations} className="text-center w-[27rem] font-ailerons text-[1.6rem] lg:text-[2.5rem] absolute bottom-[-40px] lg:bottom-[80px] lg:left-[450px]">
+                <motion.h1 {...textAnimations} className="text-center w-[27rem] font-ailerons text-[1.6rem] lg:text-[2.5rem] absolute bottom-[-40px] lg:bottom-[80px] lg:left-[500px]">
                     FRONTEND DEVELOPER
                 </motion.h1>
 
-                <motion.p {...titleAnimations} className="text-center w-[28rem] font-elianto text-[2.5rem] lg:text-[5rem] absolute bottom-[-25px] lg:bottom-[105px] lg:left-[450px]">
+                <motion.p {...titleAnimations} className="text-center w-[28rem] font-elianto text-[2.5rem] lg:text-[5rem] absolute bottom-[-25px] lg:bottom-[105px] lg:left-[500px]">
                     PROFESIÓN
                 </motion.p>
 
@@ -46,7 +45,7 @@ export const Main = () => {
                     whileHover={{ scale: 1.1 }}
                     className="z-[99] cursor-pointer rounded-[50%] h-[20rem] w-[20rem] lg:h-[30rem] lg:w-[30rem] dark:bg-white bg-black flex justify-center items-center shadow-[0_0_10rem_#0000004d] dark:shadow-[0_0_10rem_#ffffff4d]"
                 />
-                
+
                 <motion.img
                     {...smokeAnimations}
                     src={src}

@@ -20,6 +20,10 @@ export const Moon = ({ side, to, noAnimateInitial = false }: Props) => {
     const { theme } = useTheme();
     const { setActiveMoon } = useActiveMoon();
 
+    const handleMoonClick = () => {
+        setActiveMoon(side)
+    }
+
     const animations = getMoonAnimation(side, noAnimateInitial)
     const src = theme === 'light' ? '/assets/moon-light.png' : '/assets/moon-dark.png';
 
@@ -37,7 +41,7 @@ export const Moon = ({ side, to, noAnimateInitial = false }: Props) => {
                         alt="Moon"
                         className="drop-shadow-[0_0_35px_#ffffff4d] cursor-pointer"
                         whileHover={{ rotate: 360, scale: 1.05 }}
-                        onClick={() => setActiveMoon(side)}
+                        onClick={handleMoonClick}
                     />
                 </Link>
             </motion.div>

@@ -1,34 +1,27 @@
 import { MainLayout, Moon } from "../components"
-import { Main } from '../components/HomePage';
 import { useScreen } from '../hooks';
 
-export const HomePage = () => {
+export const ProjectsPage = () => {
 
     const size = useScreen();
 
     return (
-        <MainLayout hiddenOvervlowY hiddenOvervlowX>
-
+        <MainLayout>
             {
                 size === 'mobile' && (
                     <>
-                        <Moon to="/projects" side='top' />
-                        <Moon to="/technologies" side='bottom' />
+                        <Moon to="/" side='bottom' noAnimateInitial />
                     </>
                 )
             }
-
-            <Main />
 
             {
                 size === 'desktop' && (
                     <>
-                        <Moon to="/projects" side="right" />
-                        <Moon to="/technologies" side="left" />
+                        <Moon to="/" side='left' noAnimateInitial />
                     </>
                 )
             }
-
         </MainLayout>
     )
 }

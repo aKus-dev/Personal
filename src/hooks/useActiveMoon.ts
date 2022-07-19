@@ -7,6 +7,6 @@ export const useActiveMoon = () => {
 
     return {
         activeMoon,
-        setActiveMoon
+        setActiveMoon,
     }
 }
