@@ -10,19 +10,18 @@ interface Props extends Children {
     className?: string;
 }
 
-
-export const Heading = ({ children, className = '', initial = {}, animate = {}, transition = {}, exit = {} }: Props) => {
+export const Text = ({ children, className = '', initial = {}, animate = {}, transition = {}, exit = {} }: Props) => {
 
 
     return (
-        <motion.h2
-            className={`${className} text-black dark:text-white font-elianto text-[3rem] lg:text-[5rem]`}
+        <motion.p
+            className={`text-[#272626] dark:text-[#cecbcb] font-ailerons text-[2rem] lg:text-[2.5rem] ${className}`}
             initial={initial}
             animate={animate}
             transition={transition}
             exit={exit}
         >
             {children}
-        </motion.h2>
+        </motion.p>
     )
 }

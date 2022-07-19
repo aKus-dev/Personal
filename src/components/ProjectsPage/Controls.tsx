@@ -1,4 +1,8 @@
+import { motion } from 'framer-motion';
+
+import { arrowLeftAnimations, arrowRightAnimations } from '../../animations/ProjectsPage';
 import { useTheme } from "../../hooks";
+
 
 export const Controls = () => {
 
@@ -9,12 +13,12 @@ export const Controls = () => {
 
     return (
         <>
-            <button className="absolute flex items-center top-0 bottom-0 right-0 font-elianto text-[6.5rem]">
-                <img src={srcArrowRight} alt="Right" />
+            <button className="cursor-default outline-none absolute z-20 flex items-center top-0 bottom-0 right-0 font-elianto text-[6.5rem]">
+                <motion.img {...arrowRightAnimations} src={srcArrowRight} alt="Right" className="cursor-pointer" />
             </button>
 
-            <button className="absolute flex items-center top-0 bottom-0 left-0 font-elianto text-[6.5rem]">
-                <img src={srcArrowLeft} alt="Left" />
+            <button className="cursor-default outline-none absolute z-20 flex items-center top-0 bottom-0 left-0 font-elianto text-[6.5rem]">
+                <motion.img {...arrowLeftAnimations} src={srcArrowLeft} alt="Left" className="cursor-pointer" />
             </button>
         </>
     )

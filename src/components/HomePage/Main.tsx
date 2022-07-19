@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion';
+
 import { useTheme } from '../../hooks/useTheme';
+import { Heading, Text } from '../';
 
 import {
     textAnimations,
@@ -9,10 +11,14 @@ import {
     circleAnimation
 } from "../../animations/HomePage";
 
+
+
+
+
 export const Main = () => {
 
     const { theme, light, dark } = useTheme();
-    
+
     const src = theme === 'light' ? '/assets/smoke-light.png' : '/assets/smoke-dark.png';
 
     const handleChangeTheme = () => {
@@ -21,23 +27,24 @@ export const Main = () => {
 
     return (
         <main>
+
             <motion.div {...circleAnimation} className="rounded-[50%] h-[28rem] w-[28rem] lg:h-[60rem] lg:w-[60rem] border-[1px] dark:border-white border-black flex justify-center items-center relative">
 
-                <motion.h2 {...titleAnimations} className="font-elianto text-[3rem] lg:text-[5rem] absolute top-[-40px] lg:top-[80px] lg:left-[-120px]">
+                <Heading {...titleAnimations} className="absolute top-[-40px] lg:top-[80px] lg:left-[-120px]">
                     PORTFOLIO
-                </motion.h2>
+                </Heading>
 
-                <motion.p {...textAnimations} className="font-ailerons text-[2rem] lg:text-[2.5rem] absolute top-[-10px] lg:top-[140px] lg:left-[-120px]">
+                <Text {...textAnimations} className="absolute top-[-10px] lg:top-[140px] lg:left-[-120px] w-[22rem]">
                     PÁGINA PERSONAL
-                </motion.p>
+                </Text>
 
-                <motion.p {...textAnimations} className="text-center w-[27rem] font-ailerons text-[2rem] lg:text-[2.5rem] absolute bottom-[-40px] lg:bottom-[80px] lg:left-[500px]">
+                <Text {...textAnimations} className="absolute bottom-[-40px] lg:bottom-[80px] lg:left-[500px] w-[27rem]">
                     FRONTEND DEVELOPER
-                </motion.p>
+                </Text>
 
-                <motion.h2 {...titleAnimations} className="text-center w-[28rem] font-elianto text-[3rem] lg:text-[5rem] absolute bottom-[-25px] lg:bottom-[105px] lg:left-[500px]">
+                <Heading {...titleAnimations} className="absolute bottom-[-25px] lg:bottom-[105px] lg:left-[500px]">
                     PROFESIÓN
-                </motion.h2>
+                </Heading>
 
 
                 <motion.div

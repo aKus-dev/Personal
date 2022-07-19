@@ -8,7 +8,7 @@ export const ProjectsPage = () => {
     const size = useScreen();
 
     return (
-        <MainLayout>
+        <MainLayout hiddenOvervlowX>
             {
                 size === 'mobile' && (
                     <>
