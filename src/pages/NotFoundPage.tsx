@@ -4,7 +4,7 @@ import { MainLayout } from '../components';
 
 export const NotFoundPage = () => {
     return (
-        <MainLayout>
+        <MainLayout center>
             <motion.h1
                 initial={{ x: -100, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
