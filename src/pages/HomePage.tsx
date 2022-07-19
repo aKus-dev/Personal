@@ -1,6 +1,7 @@
-import { MainLayout, Moon } from "../components"
 import { Main } from '../components/HomePage';
+import { MainLayout, Moon } from "../components"
 import { useScreen } from '../hooks';
+import { validRoutes } from '../routes';
 
 export const HomePage = () => {
 
@@ -12,8 +13,8 @@ export const HomePage = () => {
             {
                 size === 'mobile' && (
                     <>
-                        <Moon to="/projects" side='top' />
-                        <Moon to="/technologies" side='bottom' />
+                        <Moon to={validRoutes.projects} side='top' />
+                        <Moon to={validRoutes.technologies} side='bottom' />
                     </>
                 )
             }
@@ -23,8 +24,8 @@ export const HomePage = () => {
             {
                 size === 'desktop' && (
                     <>
-                        <Moon to="/projects" side="right" />
-                        <Moon to="/technologies" side="left" />
+                        <Moon to={validRoutes.projects} side="right" />
+                        <Moon to={validRoutes.technologies} side="left" />
                     </>
                 )
             }

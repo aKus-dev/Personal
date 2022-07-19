@@ -1,5 +1,6 @@
 import { MainLayout, Moon } from "../components"
 import { useScreen } from '../hooks';
+import { validRoutes } from '../routes';
 
 export const ProjectsPage = () => {
 
@@ -10,7 +11,7 @@ export const ProjectsPage = () => {
             {
                 size === 'mobile' && (
                     <>
-                        <Moon to="/" side='bottom' noAnimateInitial />
+                        <Moon to={validRoutes.home} side='bottom' noAnimateInitial />
                     </>
                 )
             }
@@ -18,7 +19,7 @@ export const ProjectsPage = () => {
             {
                 size === 'desktop' && (
                     <>
-                        <Moon to="/" side='left' noAnimateInitial />
+                        <Moon to={validRoutes.home} side='left' noAnimateInitial />
                     </>
                 )
             }
