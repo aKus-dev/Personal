@@ -36,7 +36,7 @@ export const Moon = ({ side, to }: Props) => {
                 {...animations}
                 transition={{ ...transition }}
                 whileHover={{ scale: 1.1 }}
-                className="p-4 border-[7px] dark:border-white border-black w-[250px] h-[250px] rounded-[50%] flex justify-center items-center"
+                className="z-40 p-4 border-[7px] dark:border-white border-black w-[250px] h-[250px] rounded-[50%] flex justify-center items-center"
             >
                 <Link to={to}>
                     <motion.img
