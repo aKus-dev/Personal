@@ -16,7 +16,7 @@ export const NotFoundPage = () => {
                 initial={{ x: 100, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ type: 'spring', duration: 1, bounce: 0.55 }}
-            >No hemos encontrado ninguna página
+            >Página no encontrada
             </Text>
         </MainLayout>
     )

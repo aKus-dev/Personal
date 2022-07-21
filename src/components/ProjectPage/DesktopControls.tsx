@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 import { arrowLeftAnimations, arrowRightAnimations, tagAnimation } from '../../animations/ProjectsPage';
-import { Heading } from '../';
+import { Heading } from '..';
 
 export const DesktopControls = () => {
 

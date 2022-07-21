@@ -6,23 +6,24 @@ import {
     linksAnimations,
 } from '../../animations/ProjectsPage';
 
-import { Text, Heading, Link } from "../"
+import { Text, Heading, Link } from ".."
+import { Tags } from '.';
 
-import { useParams } from 'react-router-dom';
-import { projects } from '../../data/projects';
-import { Tags } from './';
+interface Props {
+    title: string;
+    desc: string;
+    tags: string[];
+}
 
 
-export const Info = () => {
+export const Info = ({title, desc, tags}: Props) => {
 
-    const { name } = useParams();
-    const result = projects.find(p => p.name === name)
 
     return (
         <div className="flex items-center flex-col gap-6 w-full">
             <div className="text-center">
                 <div className="flex gap-4 justify-center">
-                    <Heading {...titleAnimations}>{result?.title}</Heading>
+                    <Heading {...titleAnimations}>{title}</Heading>
 
                     <motion.div {...linksAnimations} className="hidden lg:flex items-center gap-2">
                         <i className="fa-solid fa-link text-[2.5rem] text-[#272626] dark:text-[#cecbcb]"></i>
@@ -33,13 +34,11 @@ export const Info = () => {
                     </motion.div>
                 </div>
 
-
-
                 <div className="lg:flex lg:flex-col lg:gap-6">
-                    <Text {...textAnimations} className="max-w-[400px] lg:max-w-[700px] text-center">{result?.desc}</Text>
+                    <Text {...textAnimations} className="max-w-[400px] lg:max-w-[700px] text-center">{desc}</Text>
 
                     <div className="hidden lg:flex flex-col gap-8">
-                        <Tags />
+                        <Tags tags={tags} />
                     </div>
                 </div>
             </div>

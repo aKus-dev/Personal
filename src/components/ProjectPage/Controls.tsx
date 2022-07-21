@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 import { arrowLeftAnimations, arrowRightAnimations } from '../../animations/ProjectsPage';
 
-
 export const Controls = () => {
 
     const bgTexture = `bg-[url('/assets/texture-light.png')] dark:bg-[url('/assets/texture-dark.png')]`

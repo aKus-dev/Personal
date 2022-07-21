@@ -10,9 +10,12 @@ import { Children } from '../../interfaces';
 import { useTheme } from '../../hooks/useTheme';
 import { projects } from '../../data/projects';
 
-
 // children: Controls (arrows)
-export const Image = ({ children }: Children) => {
+interface Props extends Children {
+    src: string;
+}
+
+export const Image = ({ children, src }: Props) => {
 
     const { theme } = useTheme();
 
@@ -27,7 +30,7 @@ export const Image = ({ children }: Children) => {
             <motion.img
                 {...lightBulbAnimations}
                 className="relative z-10 top-0 w-[350px] lg:w-[400px] drop-shadow-[0_0_25px_#d3cfcf] dark:drop-shadow-none"
-                src={`/assets/${result?.img}`}
+                src={src}
                 alt="Project icon"
             />
 
