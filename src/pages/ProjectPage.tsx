@@ -4,19 +4,25 @@ import { Image, Info, Controls, DesktopControls } from "../components/ProjectPag
 import { MainLayout, ProjectLayout, Moon } from "../components"
 import { projects } from "../data/projects";
 import { validRoutes } from '../routes';
-import { useScreen } from '../hooks';
+import { useProject, useScreen } from '../hooks';
+import { useEffect } from 'react';
 
 
 export const ProjectPage = () => {
 
     const size = useScreen();
     const { name } = useParams();
+    const { setProject } = useProject();
 
     const result = projects.find(project => project.name === name)
 
     if(!result) return <Navigate to="/" />
-    
-    const {title, desc, tags, src } = result;
+
+    useEffect(
+        () => {
+            setProject(result)
+        }, []
+    )
 
     return (
         <MainLayout hiddenOvervlowX>
@@ -29,9 +35,9 @@ export const ProjectPage = () => {
             }
 
             <ProjectLayout>
-                <Info title={title} desc={desc} tags={tags} />
+                <Info />
 
-                <Image src={src} >
+                <Image>
                     <Controls />
                 </Image>
 

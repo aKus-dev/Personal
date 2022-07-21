@@ -1,17 +1,17 @@
 import { motion } from 'framer-motion';
 
 import { tagAnimation } from '../../animations/ProjectsPage';
+import { useProject } from '../../hooks';
 
-interface Props {
-    tags: string[];
-}
+export const Tags = () => {
 
-export const Tags = ({ tags }: Props) => {
+    const { project } = useProject();
+
     return (
         <div className="flex justify-center flex-wrap gap-6">
 
             {
-                tags.map(tag => (
+                project?.tags?.map(tag => (
                     <motion.span
                         {...tagAnimation}
                         key={tag}

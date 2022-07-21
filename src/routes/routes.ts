@@ -1,4 +1,4 @@
-import { HomePage, NotFoundPage, ProjectsPage } from '../pages';
+import { HomePage, NotFoundPage, ProjectPage } from '../pages';
 
 /*
 * Se utiliza en el router
@@ -10,7 +10,7 @@ export const routes = [
     },
     {
         path: '/projects/:name',
-        Component: ProjectsPage
+        Component: ProjectPage
     },
     {
         path: '*',

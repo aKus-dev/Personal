@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { useParams } from 'react-router-dom';
 
 import {
     lightBulbAnimations,
@@ -8,29 +7,22 @@ import {
 
 import { Children } from '../../interfaces';
 import { useTheme } from '../../hooks/useTheme';
-import { projects } from '../../data/projects';
+import { useProject } from '../../hooks';
 
 // children: Controls (arrows)
-interface Props extends Children {
-    src: string;
-}
+export const Image = ({ children }: Children) => {
 
-export const Image = ({ children, src }: Props) => {
-
+    const { project } = useProject();
     const { theme } = useTheme();
 
     const srcSmoke = theme === 'light' ? '/assets/smoke-light.png' : '/assets/smoke-dark.png';
-
-    const { name } = useParams();
-    const result = projects.find(p => p.name === name)
-
 
     return (
         <div className="relative">
             <motion.img
                 {...lightBulbAnimations}
                 className="relative z-10 top-0 w-[350px] lg:w-[400px] drop-shadow-[0_0_25px_#d3cfcf] dark:drop-shadow-none"
-                src={src}
+                src={project?.src}
                 alt="Project icon"
             />
 

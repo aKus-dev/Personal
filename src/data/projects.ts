@@ -1,11 +1,14 @@
 export interface IProjects {
     name: string;
     title: string;
+    src: string;
     desc: string;
-    img: string;
+    tags: string[];
+    deploy: string;
+    github: string;
 }
 
-export const projects = [
+export const projects: IProjects[] = [
     {
         name: 'fisica',
         title: 'Física',
