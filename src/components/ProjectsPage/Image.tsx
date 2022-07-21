@@ -1,12 +1,15 @@
 import { motion } from 'framer-motion';
+import { useParams } from 'react-router-dom';
 
 import {
     lightBulbAnimations,
     smokeAnimations
-} from '../../../animations/ProjectsPage';
+} from '../../animations/ProjectsPage';
 
-import { useTheme } from '../../../hooks/useTheme';
-import { Controls } from '..';
+import { useTheme } from '../../hooks/useTheme';
+import { projects } from '../../data/projects';
+import { Controls, DesktopControls } from './';
+
 
 
 export const Image = () => {
@@ -15,12 +18,16 @@ export const Image = () => {
 
     const srcSmoke = theme === 'light' ? '/assets/smoke-light.png' : '/assets/smoke-dark.png';
 
+    const { name } = useParams();
+    const result = projects.find(p => p.name === name)
+
+
     return (
         <div className="relative">
             <motion.img
                 {...lightBulbAnimations}
                 className="relative z-10 top-0 w-[350px] lg:w-[400px] drop-shadow-[0_0_25px_#d3cfcf] dark:drop-shadow-none"
-                src="/assets/lamp.png"
+                src={`/assets/${result?.img}`}
                 alt="Project icon"
             />
 
@@ -32,6 +39,8 @@ export const Image = () => {
             />
 
             <Controls />
+            <DesktopControls />
+
         </div>
 
     )

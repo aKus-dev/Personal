@@ -23,6 +23,6 @@ export const routes = [
 */
 export const validRoutes = {
     home: '/',
-    projects: '/projects/name',
+    projects: '/projects/fisica',
     technologies: '/technologies',
 }

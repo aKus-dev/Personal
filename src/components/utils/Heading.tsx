@@ -16,7 +16,7 @@ export const Heading = ({ children, className = '', initial = {}, animate = {}, 
 
     return (
         <motion.h2
-            className={`${className} text-black dark:text-white font-elianto text-[3rem] lg:text-[5rem]`}
+            className={`${className} uppercase text-black dark:text-white font-elianto text-[3rem] lg:text-[5rem]`}
             initial={initial}
             animate={animate}
             transition={transition}

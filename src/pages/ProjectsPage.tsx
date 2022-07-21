@@ -1,9 +1,9 @@
-import { Mobile, Desktop } from "../components/ProjectsPage";
-import { MainLayout, Moon } from "../components"
-import { useScreen } from '../hooks';
+import { Image, Info } from "../components/ProjectsPage";
+import { MainLayout, ProjectLayout, Moon } from "../components"
 import { validRoutes } from '../routes';
+import { useScreen } from '../hooks';
 
-//TODO: Mostrar condicionalmente mobile & desktop ya que van a tener 2 layouts distintos
+
 export const ProjectsPage = () => {
 
     const size = useScreen();
@@ -18,9 +18,10 @@ export const ProjectsPage = () => {
                 )
             }
 
-            {
-                size === 'mobile' ? <Mobile /> :  <Desktop />
-            }
+            <ProjectLayout>
+                <Info />
+                <Image />
+            </ProjectLayout>
 
             {
                 size === 'desktop' && (
@@ -33,4 +34,3 @@ export const ProjectsPage = () => {
     )
 }
 
-                   

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-import { tagAnimation } from '../../../animations/ProjectsPage';
+import { tagAnimation } from '../../animations/ProjectsPage';
 
 export const Tags = () => {
     return (
