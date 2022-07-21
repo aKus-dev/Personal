@@ -4,9 +4,9 @@ import {
     titleAnimations,
     textAnimations,
     linksAnimations,
-} from '../../animations/ProjectsPage';
+} from '../../../animations/ProjectsPage';
 
-import { Text, Heading, Link } from "../"
+import { Text, Heading, Link } from "../.."
 
 export const Info = () => {
     return (

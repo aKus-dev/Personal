@@ -9,7 +9,7 @@ export const routes = [
         Component: HomePage
     },
     {
-        path: '/projects',
+        path: '/projects/:name',
         Component: ProjectsPage
     },
     {
@@ -23,6 +23,6 @@ export const routes = [
 */
 export const validRoutes = {
     home: '/',
-    projects: '/projects',
+    projects: '/projects/name',
     technologies: '/technologies',
 }

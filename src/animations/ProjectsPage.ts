@@ -46,3 +46,11 @@ export const arrowRightAnimations = {
     transition: { type: 'spring', duration: 1 },
     exit: { x: 100, opacity: 0 }
 }
+
+
+export const tagAnimation = {
+    initial: { scale: 0, opacity: 0 },
+    animate: { scale: 1, opacity: 1 },
+    transition: { type: 'spring', duration: 1 },
+    exit: { x: 100, opacity: 0 }
+}
