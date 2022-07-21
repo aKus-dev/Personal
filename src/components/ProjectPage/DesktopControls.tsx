@@ -2,9 +2,12 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 import { arrowLeftAnimations, arrowRightAnimations, tagAnimation } from '../../animations/ProjectsPage';
+import { useProject } from '../../hooks';
 import { Heading } from '..';
 
 export const DesktopControls = () => {
+
+    const { project } = useProject();
 
     const bgTexture = `bg-[url('/assets/texture-light.png')] dark:bg-[url('/assets/texture-dark.png')]`
 
@@ -20,7 +23,7 @@ export const DesktopControls = () => {
                 </motion.button>
             </Link>
 
-            <Heading {...tagAnimation}>#1</Heading>
+            <Heading {...tagAnimation}>#{project.number}</Heading>
 
             <Link to="/projects/e-commerce">
                 <motion.button {...arrowRightAnimations} className={`${bgTexture} w-[50px] h-[50px] rounded-[50%]`}>
