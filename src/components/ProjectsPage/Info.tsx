@@ -22,7 +22,7 @@ export const Info = () => {
         <div className="flex items-center flex-col gap-6 w-full">
             <div className="text-center">
                 <div className="flex gap-4 justify-center">
-                    <Heading {...titleAnimations}>{result?.name}</Heading>
+                    <Heading {...titleAnimations}>{result?.title}</Heading>
 
                     <motion.div {...linksAnimations} className="hidden lg:flex items-center gap-2">
                         <i className="fa-solid fa-link text-[2.5rem] text-[#272626] dark:text-[#cecbcb]"></i>

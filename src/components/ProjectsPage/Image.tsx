@@ -6,13 +6,13 @@ import {
     smokeAnimations
 } from '../../animations/ProjectsPage';
 
+import { Children } from '../../interfaces';
 import { useTheme } from '../../hooks/useTheme';
 import { projects } from '../../data/projects';
-import { Controls, DesktopControls } from './';
 
 
-
-export const Image = () => {
+// children: Controls (arrows)
+export const Image = ({ children }: Children) => {
 
     const { theme } = useTheme();
 
@@ -38,9 +38,7 @@ export const Image = () => {
                 className="absolute bottom-[-40px] w-[350px] lg:w-[400px] drop-shadow-[0_0_25px_#d3cfcf] dark:drop-shadow-none"
             />
 
-            <Controls />
-            <DesktopControls />
-
+            {children}
         </div>
 
     )

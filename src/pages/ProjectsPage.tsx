@@ -1,4 +1,4 @@
-import { Image, Info } from "../components/ProjectsPage";
+import { Image, Info, Controls, DesktopControls } from "../components/ProjectsPage";
 import { MainLayout, ProjectLayout, Moon } from "../components"
 import { validRoutes } from '../routes';
 import { useScreen } from '../hooks';
@@ -20,7 +20,12 @@ export const ProjectsPage = () => {
 
             <ProjectLayout>
                 <Info />
-                <Image />
+
+                <Image>
+                    <Controls />
+                </Image>
+
+                <DesktopControls />
             </ProjectLayout>
 
             {
